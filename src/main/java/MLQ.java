@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -35,7 +38,9 @@ public class MLQ implements ScheduleInterface {
     // pointer to the process currently executing on the CPU
     Process procOnCPU;
     // switch variable indicating whether to display state at every context switch
-    private boolean displayMode = false;
+    private boolean displayMode = true;
+    // file to write output to if desired
+    FileWriter outFile = null;
     // switch variable indicating whether to display state every tick for debugging
     private boolean debugMode = false;
 
@@ -137,7 +142,7 @@ public class MLQ implements ScheduleInterface {
                         procOnCPU.setCurrentState(Process.State.RUNNING);
                         currCycleTimer = 1;
                         // print output for this context switch if desired
-                        if (displayMode) displayState(false);
+                        if (displayMode) displayState(true, false);
                     }
                 // otherwise we have to switch queues and start the first process from the other queue
                 } else if (idleQueue.size() > 0) {
@@ -148,20 +153,27 @@ public class MLQ implements ScheduleInterface {
                     // set the selected process to running
                     procOnCPU.setCurrentState(Process.State.RUNNING);
                     // print output for this context switch if desired
-                    if (displayMode) displayState(false);
+                    if (displayMode) displayState( true,false);
                 } else {
                     // both queues are empty, so the CPU will be idle
                     procOnCPU = null;
                     if (!cpuIsIdle) {
                         cpuIsIdle = true;
                         // display this context switch if desired
-                        if (displayMode) displayState(false);
+                        if (displayMode) displayState(true, false);
                     }
                 }
             // run a tick on all processes
             tickAll();
-            if (debugMode) displayState(false);
-    }
+            if (debugMode) displayState(false, true);
+        }
+        if (!(outFile==null)){
+            try {
+                outFile.close();
+            } catch (IOException e) {
+                System.out.println(e);
+            }
+        }
         return finishedProcesses;
     }
 
@@ -224,6 +236,13 @@ public class MLQ implements ScheduleInterface {
     @Override
     public void setDisplayMode(boolean displayMode) {
         this.displayMode = displayMode;
+        if (displayMode){
+            try {
+                outFile = new FileWriter(new File("MLQ.txt"));
+            } catch (IOException e) {
+                System.out.println(e);
+            }
+        }
     }
 
     /**
@@ -235,64 +254,64 @@ public class MLQ implements ScheduleInterface {
     }
 
     /**
-     * Prints out the current state of all queues.
-     *
-     * @param waitBetweenPages - boolean to wait for command line input or not.
+     * {@inheritDoc}
      */
-    public void displayState(boolean waitBetweenPages) {
-        System.out.println("Current Time: " + timer);
-        System.out.println();
-        System.out.println("Process on CPU: " + ((cpuIsIdle) ? "<none>" : procOnCPU.getName() + ", remaining burst duration: " +
+    public void displayState(boolean writeToFile, boolean writeToScreen) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("\nCurrent Time: " + timer);
+        sb.append("\n");
+        sb.append("\nProcess on CPU: " + ((cpuIsIdle) ? "<none>" : procOnCPU.getName() + ", remaining burst duration: " +
                 (procOnCPU.getCurrentBurstType()==Process.BurstType.CPU ? procOnCPU.getCurrentDuration() : "<finished>")));
-        System.out.println(".......................................................");
-        System.out.println();
-        System.out.println("List of processes in the foreground queue: " + (activeQueue ==foregroundQueue ? "<active> current TQ " + currCycleTimer + "/" + foregroundTQ : "") );
-        System.out.println();
+        sb.append("\n.......................................................");
+        sb.append("\n");
+        sb.append("\nList of processes in the foreground queue: " + (activeQueue ==foregroundQueue ? "<active> current TQ " + currCycleTimer + "/" + foregroundTQ : "") );
+        sb.append("\n");
         if (!foregroundQueue.isEmpty()) {
-            System.out.println("\t\tProcess\t\tBurst");
+            sb.append("\n\t\tProcess\t\tBurst");
             for (Process p : foregroundQueue) {
-                System.out.println("\t\t\t" + p.getName() + "\t\t" + p.getCurrentDuration());
+                sb.append("\n\t\t\t" + p.getName() + "\t\t" + p.getCurrentDuration());
             }
         } else {
-            System.out.println("\t\t<none>");
+            sb.append("\n\t\t<none>");
         }
-        System.out.println();
-        System.out.println("List of processes in the background queue: " + (activeQueue ==backgroundQueue ? "<active> ": ""));
-        System.out.println();
+        sb.append("\n");
+        sb.append("\nList of processes in the background queue: " + (activeQueue ==backgroundQueue ? "<active> ": ""));
+        sb.append("\n");
         if (!backgroundQueue.isEmpty()) {
-            System.out.println("\t\tProcess\t\tBurst");
+            sb.append("\n\t\tProcess\t\tBurst");
             for (Process p : backgroundQueue) {
-                System.out.println("\t\t\t" + p.getName() + "\t\t" + p.getCurrentDuration());
+                sb.append("\n\t\t\t" + p.getName() + "\t\t" + p.getCurrentDuration());
             }
         } else {
-            System.out.println("\t\t<none>");
+            sb.append("\n\t\t<none>");
         }
-        System.out.println();
-        System.out.println(".......................................................");
-        System.out.println("List of processes in I/O:");
-        System.out.println();
+        sb.append("\n");
+        sb.append("\n.......................................................");
+        sb.append("\nList of processes in I/O:");
+        sb.append("\n");
         if (outForIO.size() > 0) {
-            System.out.println("\t\tProcess\tRemaining I/O time");
+            sb.append("\n\t\tProcess\tRemaining I/O time");
             for (Process p : outForIO) {
-                System.out.println("\t\t\t" + p.getName() + "\t\t" + p.getCurrentDuration());
+                sb.append("\n\t\t\t" + p.getName() + "\t\t" + p.getCurrentDuration());
             }
         } else {
-            System.out.println("\t\t<none>");
+            sb.append("\n\t\t<none>");
         }
-        System.out.println();
-        System.out.println(".......................................................");
-        System.out.println();
-        System.out.print("Finished processes: ");
-        for (Process p : finishedProcesses) System.out.print(p.getName() + " ");
-        System.out.println();
-        System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-        System.out.println();
-        System.out.println();
-        if (waitBetweenPages) {
-            System.out.println("Press ENTER to continue...");
+        sb.append("\n");
+        sb.append("\n.......................................................");
+        sb.append("\n");
+        sb.append("Finished processes: ");
+        for (Process p : finishedProcesses) sb.append(p.getName() + " ");
+        sb.append("\n");
+        sb.append("\n:::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+        sb.append("\n");
+        sb.append("\n");
+        if (writeToScreen) System.out.println(sb.toString());
+        if (writeToFile) {
             try {
-                System.in.read();
-            } catch (Exception e) {
+                outFile.write(sb.toString());
+                outFile.flush();
+            } catch (IOException e) {
                 System.out.println(e);
             }
         }

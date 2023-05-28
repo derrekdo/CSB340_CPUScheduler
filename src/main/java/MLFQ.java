@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -35,6 +38,8 @@ public class MLFQ implements ScheduleInterface{
     private Process processOnCpu;
     //determines if data is displayed
     boolean displayMode;
+    // file to write output to if desired
+    FileWriter outFile = null;
 
     public MLFQ(List<Process> processes, int highPriorityTQ, int medPriorityTQ){
         highPriorityRQ = new LinkedList<>(processes);
@@ -101,12 +106,12 @@ public class MLFQ implements ScheduleInterface{
                 }
             }
             if (displayMode) {
-                displayState(false);
+                displayState(true, false);
             }
             tickProcess(burstDuration);
         }
         if (displayMode) {
-            displayState(false);
+            displayState(true, false);
         }
         return completed;
     }
@@ -159,24 +164,28 @@ public class MLFQ implements ScheduleInterface{
         }
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
-    public void displayState(boolean waitBetweenPages) {
-        System.out.println("\n\nCurrent Time: " + currentTime);
-        System.out.print("Next Process on CPU: ");
+    public void displayState(boolean writeToFile, boolean writeToScreen) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("\n\nCurrent Time: " + currentTime + "\n");
+        sb.append("Next Process on CPU: ");
         if (processOnCpu != null && processOnCpu.getCurrentState() == Process.State.RUNNING) {
-            System.out.println(processOnCpu.getName() + " \nBurst Time: " + processOnCpu.getCurrentDuration());
+            sb.append(processOnCpu.getName() + " \nBurst Time: " + processOnCpu.getCurrentDuration() + "\n");
             if (currentPriority.get(processOnCpu) == 0) {
-                System.out.println("Time Quantum: " + highPriorityTQ);
+                sb.append("Time Quantum: " + highPriorityTQ + "\n");
             } else if (currentPriority.get(processOnCpu) == 1) {
-                System.out.println("Time Quantum: " + medPriorityTQ);
+                sb.append("Time Quantum: " + medPriorityTQ + "\n");
             }
         } else {
-            System.out.println("IDLE");
+            sb.append("IDLE" + "\n");
         }
 
-        System.out.println("..................................................");
-        System.out.println("\nList of processes in the ready queue:\n");
-        System.out.println("\t\tProcess\t\tBurst\t\tQueue");
+        sb.append(".................................................." + "\n");
+        sb.append("\nList of processes in the ready queue:\n" + "\n");
+        sb.append("\t\tProcess\t\tBurst\t\tQueue" + "\n");
         int index = 0;
         int counter = 0;
         while (index < readyQueues.size()) {
@@ -184,89 +193,90 @@ public class MLFQ implements ScheduleInterface{
                 counter++;
             }
             if (counter == 3){
-                System.out.println("\t\t[empty]");
+                sb.append("\t\t[empty]" + "\n");
             } else {
                 for (Process p : readyQueues.get(index)) {
-                    System.out.print("\t\t\t" + p.getName() + "\t\t\t" + p.getCurrentDuration());
-                    System.out.println("\t\t\tQ" + currentPriority.get(p));
+                    sb.append("\t\t\t" + p.getName() + "\t\t\t" + p.getCurrentDuration());
+                    sb.append("\t\t\tQ" + currentPriority.get(p) + "\n");
                 }
             }
             index++;
         }
 
-        System.out.println("..................................................");
-        System.out.println("\nList of processes in I/O:\n");
-        System.out.println("\t\tProcess\t\tRemaining I/O time");
+        sb.append(".................................................." + "\n");
+        sb.append("\nList of processes in I/O:\n" + "\n");
+        sb.append("\t\tProcess\t\tRemaining I/O time" + "\n");
 
         if (inIO.isEmpty()) {
-            System.out.println("\t\t[empty]");
+            sb.append("\t\t[empty]" + "\n");
         } else {
             for (Process p : inIO) {
-                System.out.println("\t\t\t" + p.getName() + "\t\t\t" + p.getCurrentDuration());
+                sb.append("\t\t\t" + p.getName() + "\t\t\t" + p.getCurrentDuration() + "\n");
             }
         }
 
-        System.out.println("..................................................");
+        sb.append(".................................................." + "\n");
         if (!completed.isEmpty()) {
-            System.out.print("\nCompleted: ");
+            sb.append("\nCompleted: ");
             for (Process p : completed) {
-                System.out.print(p.getName() + " ");
+                sb.append(p.getName() + " ");
             }
-            System.out.println();
-            System.out.println("..................................................");
+            sb.append("\n");
+            sb.append(".................................................." + "\n");
         }
-        System.out.println("..................................................");
+        sb.append(".................................................." + "\n");
 
         if (completed.size() == size) {
             Queue<Integer> waitTimes = new LinkedList<>();
             Queue<Integer> turnAroundTimes = new LinkedList<>();
             Queue<Integer> responseTimes = new LinkedList<>();
 
-            System.out.println("\n\n");
-            System.out.println("FINISHED\n");
-            System.out.println("Total Time:\t\t\t" + currentTime);
-            System.out.printf("CPU Utilization:\t%.4f", (cpuTime / currentTime) * 100 );
-            System.out.println("%");
+            sb.append("\n\n" + "\n");
+            sb.append("FINISHED\n" + "\n");
+            sb.append("Total Time:\t\t\t" + currentTime + "\n");
+            sb.append(String.format("CPU Utilization:\t%.4f", (cpuTime / currentTime) * 100 ));
+            sb.append("%" + "\n");
             String[] timeType = {"Waiting Times", "Turnaround Times", "Response Times"};
 
             for (int i = 0; i < timeType.length; i++) {
-                System.out.print("\n" + timeType[i] + "\t");
+                sb.append("\n" + timeType[i] + "\t");
                 if (i != 1) {
-                    System.out.print("\t");
+                    sb.append("\t");
                 }
 
                 for (Process process : allProcesses) {
-                    System.out.print(process.getName() + "\t");
+                    sb.append(process.getName() + "\t");
                     if (i == 0) {
                         waitTimes.add(process.getWaitingTime());
                         turnAroundTimes.add(process.getTurnaroundTime());
                         responseTimes.add(process.getResponseTime());
                     }
                 }
-                System.out.print("\n\t\t\t\t\t");
+                sb.append("\n\t\t\t\t\t");
                 if (i == 0) {
                     while (!waitTimes.isEmpty()) {
-                        System.out.print(waitTimes.remove() + "\t");
+                        sb.append(waitTimes.remove() + "\t");
                     }
-                    System.out.printf("\nAverage Wait:\t\t%.2f %n", (totWaitTime / size));
+                    sb.append(String.format("\nAverage Wait:\t\t%.2f %n", (totWaitTime / size)));
                 } else if (i == 1) {
                     while (!turnAroundTimes.isEmpty()) {
-                        System.out.print(turnAroundTimes.remove() + "\t");
+                        sb.append(turnAroundTimes.remove() + "\t");
                     }
-                    System.out.printf("\nAverage Turnaround: %.3f %n", (totTurnaroundTime / size));
+                    sb.append(String.format("\nAverage Turnaround: %.3f %n", (totTurnaroundTime / size)));
                 } else {
                     while (!responseTimes.isEmpty()) {
-                        System.out.print(responseTimes.remove() + "\t");
+                        sb.append(responseTimes.remove() + "\t");
                     }
-                    System.out.printf("\nAverage Response:\t%.3f %n%n", (totResponseTime / size));
+                    sb.append(String.format("\nAverage Response:\t%.3f %n%n", (totResponseTime / size)));
                 }
             }
         }
-        if (waitBetweenPages) {
-            System.out.println("Press Enter to continue . . .");
+        if (writeToScreen) System.out.println(sb.toString());
+        if (writeToFile) {
             try {
-                System.in.read();
-            } catch (Exception e) {
+                outFile.write(sb.toString());
+                outFile.flush();
+            } catch (IOException e) {
                 System.out.println(e);
             }
         }
@@ -286,6 +296,13 @@ public class MLFQ implements ScheduleInterface{
     @Override
     public void setDisplayMode(boolean displayMode) {
         this.displayMode = displayMode;
+        if (displayMode){
+            try {
+                outFile = new FileWriter(new File("MLFQ.txt"));
+            } catch (IOException e) {
+                System.out.println(e);
+            }
+        }
     }
 
     /**

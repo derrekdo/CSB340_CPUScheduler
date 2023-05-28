@@ -15,6 +15,7 @@ class SJFTest {
 
         Process[] testData = testUtil.getDefaultTestData();
         SJF sjf = new SJF(testData);
+        sjf.setDisplayMode(true);
         List<Process> result = sjf.process();
         String[] expected = {"P1", "P6", "P8", "P7", "P2", "P4", "P5", "P3"};
         ArrayList<String> actual = new ArrayList<>(result.size());

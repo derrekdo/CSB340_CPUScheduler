@@ -14,9 +14,10 @@ public interface ScheduleInterface {
 
     /**
      * Display the snapshots of each process state.
-     * @param waitBetweenPages - boolean to wait for command line input or not.
+     * @param writeToFile - boolean to write detailed output to file.
+     * @param writeToScreen - boolean to write detailed output to screen.
      */
-    public void displayState(boolean waitBetweenPages);
+    public void displayState(boolean writeToFile, boolean writeToScreen);
 
     /**
      * Return the current display mode.

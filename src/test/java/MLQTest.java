@@ -16,6 +16,7 @@ class MLQTest {
 
         Process[] testData = testUtil.getDefaultTestData();
         MLQ mlq = new MLQ(Arrays.stream(testData,0,4).toList(), Arrays.stream(testData,4,8).toList(), 4);
+        mlq.setDisplayMode(true);
         List<Process> result = mlq.process();
         String[] expected = {"P1", "P3", "P2", "P4", "P8", "P6", "P7", "P5"};
         ArrayList<String> actual = new ArrayList<>(result.size());

@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -24,6 +27,8 @@ public class Priority implements ScheduleInterface {
     private final Set<Process> processedList  = new LinkedHashSet<>();
     private int algorithmTotalTime = 0;
     private boolean displayMode = false;
+    // file to write output to if desired
+    FileWriter outFile = null;
     private Process currentRunningProcess = null;
 
     private int cpuTime = 0;
@@ -85,7 +90,7 @@ public class Priority implements ScheduleInterface {
                     // display logic
                     if (displayMode) {
                         currentRunningProcess = currProc;
-                        displayState(false);
+                        displayState(true, false);
                     }
                     // end display logic
                     tick();
@@ -100,7 +105,7 @@ public class Priority implements ScheduleInterface {
         // last snapshot
         if (displayMode) {
             currentRunningProcess = null;
-            displayState(false);
+            displayState(true, false);
         }
         // end snapshot logic
         return processedList.stream().toList();
@@ -140,51 +145,51 @@ public class Priority implements ScheduleInterface {
     }
 
     /**
-     * Display the snapshots of each process state.
-     *
-     * @param waitBetweenPages - boolean to wait for command line input or not.
+     * {@inheritDoc}
      */
     @Override
-    public void displayState(boolean waitBetweenPages) {
-        System.out.println("Process burst reference:");
+    public void displayState(boolean writeToFile, boolean writeToScreen) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Process burst reference:" + "\n");
         for (Process p : allProcesses) {
-            System.out.println(p.toString());
+            sb.append(p.toString() + "\n");
         }
-        System.out.println(".......................................................");
-        System.out.println("Current Time: " + algorithmTotalTime);
-        System.out.println();
+        sb.append("......................................................." + "\n");
+        sb.append("Current Time: " + algorithmTotalTime + "\n");
+        sb.append("\n");
         System.out.println("Next process on CPU: " +
                 ((currentRunningProcess == null) ? "<none>" : currentRunningProcess.getName()) + ", duration: " +
                 ((currentRunningProcess == null) ? "<none>" : currentRunningProcess.getCurrentDuration()));
-        System.out.println(".......................................................");
-        System.out.println();
-        System.out.println("List of processes in the ready queue:");
-        System.out.println();
-        System.out.println("\t\tProcess\t\tBurst");
+        sb.append("......................................................." + "\n");
+        sb.append("\n");
+        sb.append("List of processes in the ready queue:" + "\n");
+        sb.append("\n");
+        sb.append("\t\tProcess\t\tBurst" + "\n");
         for (Process p : readyQ) {
-            System.out.println("\t\t\t" + p.getName() + "\t\t" + p.getCurrentDuration());
+            sb.append("\t\t\t" + p.getName() + "\t\t" + p.getCurrentDuration() + "\n");
         }
-        System.out.println();
-        System.out.println(".......................................................");
-        System.out.println("List of processes in I/O:");
-        System.out.println();
-        System.out.println("\t\tProcess\tRemaining I/O time");
+        sb.append("\n");
+        sb.append("......................................................." + "\n");
+        sb.append("List of processes in I/O:" + "\n");
+        sb.append("\n");
+        sb.append("\t\tProcess\tRemaining I/O time" + "\n");
         for (Process p : ioQ) {
-            System.out.println("\t\t\t" + p.getName() + "\t\t" + p.getCurrentDuration());
+            sb.append("\t\t\t" + p.getName() + "\t\t" + p.getCurrentDuration() + "\n");
         }
-        System.out.println(".......................................................");
-        System.out.println();
-        System.out.print("Finished processes: ");
-        for (Process p : processedList) System.out.print(p.getName() + " ");
-        System.out.println();
-        System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-        System.out.println();
-        System.out.println();
-        if (waitBetweenPages) {
-            System.out.println("Press ENTER to continue...");
+        sb.append("......................................................." + "\n");
+        sb.append("\n");
+        sb.append("Finished processes: ");
+        for (Process p : processedList) sb.append(p.getName() + " ");
+        sb.append("\n");
+        sb.append(":::::::::::::::::::::::::::::::::::::::::::::::::::::::" + "\n");
+        sb.append("\n");
+        sb.append("\n");
+        if (writeToScreen) System.out.println(sb.toString());
+        if (writeToFile) {
             try {
-                System.in.read();
-            } catch (Exception e) {
+                outFile.write(sb.toString());
+                outFile.flush();
+            } catch (IOException e) {
                 System.out.println(e);
             }
         }
@@ -205,6 +210,13 @@ public class Priority implements ScheduleInterface {
     @Override
     public void setDisplayMode(boolean displayMode) {
         this.displayMode = displayMode;
+        if (displayMode){
+            try {
+                outFile = new FileWriter(new File("Priority.txt"));
+            } catch (IOException e) {
+                System.out.println(e);
+            }
+        }
     }
 
     /**

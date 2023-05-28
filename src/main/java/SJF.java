@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -28,6 +31,8 @@ public class SJF implements ScheduleInterface {
     Process procOnCPU;
     // switch variable indicating whether to display state at every context switch
     private boolean displayMode = false;
+    // file to write output to if desired
+    FileWriter outFile = null;
 
     public SJF(Process[] processes) {
         timer = 0;
@@ -108,7 +113,7 @@ public class SJF implements ScheduleInterface {
                     // pick the next process from the ready queue
                     procOnCPU = readyQueue.remove();
                     // print output for this context switch if desired
-                    if (displayMode) displayState(false);
+                    if (displayMode) displayState(true, false);
                 }
                 cpuIsIdle = false;
                 // set the selected process to running
@@ -119,7 +124,7 @@ public class SJF implements ScheduleInterface {
                 if (!cpuIsIdle) {
                     cpuIsIdle = true;
                     // display this context switch if desired
-                    if (displayMode) displayState(false);
+                    if (displayMode) displayState(true, false);
                 }
             }
             // run a tick on all processes
@@ -156,6 +161,13 @@ public class SJF implements ScheduleInterface {
     @Override
     public void setDisplayMode(boolean displayMode) {
         this.displayMode = displayMode;
+        if (displayMode){
+            try {
+                outFile = new FileWriter(new File("SJF.txt"));
+            } catch (IOException e) {
+                System.out.println(e);
+            }
+        }
     }
 
     /**
@@ -167,44 +179,43 @@ public class SJF implements ScheduleInterface {
     }
 
     /**
-     * Prints out the current state of all queues.
-     *
-     * @param waitBetweenPages - boolean to wait for command line input or not.
+     * {@inheritDoc}
      */
-    public void displayState(boolean waitBetweenPages) {
-        System.out.println("Current Time: " + timer);
-        System.out.println();
-        System.out.println("Next process on CPU: " + ((cpuIsIdle) ? "<none>" : procOnCPU.getName() + ", duration: " +
-                procOnCPU.getCurrentDuration()));
-        System.out.println(".......................................................");
-        System.out.println();
-        System.out.println("List of processes in the ready queue:");
-        System.out.println();
-        System.out.println("\t\tProcess\t\tBurst");
+    public void displayState(boolean writeToFile, boolean writeToScreen) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Current Time: " + timer + "\n");
+        sb.append("\n");
+        sb.append("Next process on CPU: " + ((cpuIsIdle) ? "<none>" : procOnCPU.getName() + ", duration: " + procOnCPU.getCurrentDuration()) + "\n");
+        sb.append("......................................................." + "\n");
+        sb.append("\n");
+        sb.append("List of processes in the ready queue:" + "\n");
+        sb.append("\n");
+        sb.append("\t\tProcess\t\tBurst" + "\n");
         for (Process p : readyQueue) {
-            System.out.println("\t\t\t" + p.getName() + "\t\t" + p.getCurrentDuration());
+            sb.append("\t\t\t" + p.getName() + "\t\t" + p.getCurrentDuration() + "\n");
         }
-        System.out.println();
-        System.out.println(".......................................................");
-        System.out.println("List of processes in I/O:");
-        System.out.println();
-        System.out.println("\t\tProcess\tRemaining I/O time");
+        sb.append("\n");
+        sb.append("......................................................." + "\n");
+        sb.append("List of processes in I/O:" + "\n");
+        sb.append("\n");
+        sb.append("\t\tProcess\tRemaining I/O time" + "\n");
         for (Process p : outForIO) {
-            System.out.println("\t\t\t" + p.getName() + "\t\t" + p.getCurrentDuration());
+            sb.append("\t\t\t" + p.getName() + "\t\t" + p.getCurrentDuration() + "\n");
         }
-        System.out.println(".......................................................");
-        System.out.println();
-        System.out.print("Finished processes: ");
-        for (Process p : finishedProcesses) System.out.print(p.getName() + " ");
-        System.out.println();
-        System.out.println(":::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-        System.out.println();
-        System.out.println();
-        if (waitBetweenPages) {
-            System.out.println("Press ENTER to continue...");
+        sb.append("......................................................." + "\n");
+        sb.append("\n");
+        sb.append("Finished processes: ");
+        for (Process p : finishedProcesses) sb.append(p.getName() + " ");
+        sb.append("\n");
+        sb.append(":::::::::::::::::::::::::::::::::::::::::::::::::::::::" + "\n");
+        sb.append("\n");
+        sb.append("\n");
+        if (writeToScreen) System.out.println(sb.toString());
+        if (writeToFile) {
             try {
-                System.in.read();
-            } catch (Exception e) {
+                outFile.write(sb.toString());
+                outFile.flush();
+            } catch (IOException e) {
                 System.out.println(e);
             }
         }

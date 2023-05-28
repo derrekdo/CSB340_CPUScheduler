@@ -13,6 +13,7 @@ class RRTest {
     void testRuns() {
         Process[] testData = testUtil.getDefaultTestData();
         RR rr = new RR(Arrays.stream(testData).toList());
+        rr.setDisplayMode(true);
         List<Process> result = rr.process();
         String[] expected = {"P1", "P6", "P8", "P2", "P5", "P4", "P7", "P3"};
         ArrayList<String> actual = new ArrayList<>(8);
