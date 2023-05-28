@@ -238,7 +238,7 @@ public class MLQ implements ScheduleInterface {
         this.displayMode = displayMode;
         if (displayMode){
             try {
-                outFile = new FileWriter(new File("MLQ.txt"));
+                outFile = new FileWriter(new File("data&charts/outputFiles/MLQ.txt"));
             } catch (IOException e) {
                 System.out.println(e);
             }

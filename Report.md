@@ -18,6 +18,7 @@
 8. [Design Process](#design-process)
 8. [UML Diagram](#uml-diagram)
 9. [Data](#results)
+   - [Output Files](#output-files)
    - [Average Breakdown](#average-breakdown)
    - [First Come First Served Results](#first-come-first-served-results)
    - [Shortest Job First Results](#shortest-job-first-results)
@@ -168,6 +169,11 @@ to understand what we had put together to make it work correctly.
 
 ## Results
 
+### Output Files
+
+Each alogorithm will have a file of snapshots saved to [data&charts/outputFiles](data&charts/outputFiles)
+when run with display mode on.
+
 ### Average Breakdown
 
 ![Results](data&charts/All_Algo_Data.PNG)
@@ -192,6 +198,8 @@ to understand what we had put together to make it work correctly.
 
 ### Multi-level Feedback Queue Results
 ![MLFQ Data](data&charts/MLFQ_Data.PNG)
+
+All output file
 
 ## Conclusion
 

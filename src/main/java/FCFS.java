@@ -223,7 +223,7 @@ public class FCFS implements ScheduleInterface{
         this.displayMode = displayMode;
         if (displayMode){
             try {
-                outFile = new FileWriter(new File("FCFS.txt"));
+                outFile = new FileWriter(new File("data&charts/outputFiles/FCFS.txt"));
             } catch (IOException e) {
                 System.out.println(e);
             }

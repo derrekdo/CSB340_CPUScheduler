@@ -163,7 +163,7 @@ public class SJF implements ScheduleInterface {
         this.displayMode = displayMode;
         if (displayMode){
             try {
-                outFile = new FileWriter(new File("SJF.txt"));
+                outFile = new FileWriter(new File("data&charts/outputFiles/SJF.txt"));
             } catch (IOException e) {
                 System.out.println(e);
             }

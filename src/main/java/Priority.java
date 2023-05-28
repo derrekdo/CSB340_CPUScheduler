@@ -150,10 +150,6 @@ public class Priority implements ScheduleInterface {
     @Override
     public void displayState(boolean writeToFile, boolean writeToScreen) {
         StringBuilder sb = new StringBuilder();
-        sb.append("Process burst reference:" + "\n");
-        for (Process p : allProcesses) {
-            sb.append(p.toString() + "\n");
-        }
         sb.append("......................................................." + "\n");
         sb.append("Current Time: " + algorithmTotalTime + "\n");
         sb.append("\n");
@@ -212,7 +208,7 @@ public class Priority implements ScheduleInterface {
         this.displayMode = displayMode;
         if (displayMode){
             try {
-                outFile = new FileWriter(new File("Priority.txt"));
+                outFile = new FileWriter(new File("data&charts/outputFiles/Priority.txt"));
             } catch (IOException e) {
                 System.out.println(e);
             }

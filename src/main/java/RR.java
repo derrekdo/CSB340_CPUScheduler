@@ -172,7 +172,7 @@ public class RR implements ScheduleInterface {
         this.displayMode = displayMode;
         if (displayMode){
             try {
-                outFile = new FileWriter(new File("RR.txt"));
+                outFile = new FileWriter(new File("data&charts/outputFiles/RR.txt"));
             } catch (IOException e) {
                 System.out.println(e);
             }
@@ -198,10 +198,6 @@ public class RR implements ScheduleInterface {
      */
     public void displayState(boolean writeToFile, boolean writeToScreen) {
         StringBuilder sb = new StringBuilder();
-        sb.append("Process burst reference:" + "\n");
-        for (Process p : allProcesses) {
-            sb.append(p.toString() + "\n");
-        }
         sb.append("......................................................." + "\n");
         sb.append("Current Time: " + algorithmTotalTime + "\n");
         sb.append("\n");
@@ -214,8 +210,8 @@ public class RR implements ScheduleInterface {
         sb.append("\n");
         sb.append("\t\tProcess\t\tBurst" + "\n");
         for (Process p : readyQ) {
-            System.out.println("\t\t\t" + p.getName() + "\t\t" +
-                    ((Integer)p.getCurrentDuration() == null ? "<none>" : p.getCurrentDuration()));
+            sb.append("\t\t\t" + p.getName() + "\t\t" +
+                    ((Integer)p.getCurrentDuration() == null ? "<none>" : p.getCurrentDuration()) + "\n");
         }
         sb.append("\n");
         sb.append("......................................................." + "\n");
