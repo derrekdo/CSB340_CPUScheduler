@@ -1,1 +1,6 @@
-outputFiles
+outputFiles/FCFS.txt
+outputFiles/MLFQ.txt
+outputFiles/MLFQ.txt
+outputFiles/Priority.txt
+outputFiles/RR.txt
+outputFiles/SJF.txt

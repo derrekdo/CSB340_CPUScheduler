@@ -1,0 +1,3756 @@
+
+Current Time: 0
+
+Process on CPU: P1, remaining burst duration: 5
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P2		4
+			P3		8
+			P4		3
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		16
+			P6		11
+			P7		14
+			P8		4
+
+.......................................................
+List of processes in I/O:
+
+		<none>
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 4
+
+Process on CPU: P2, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P3		8
+			P4		3
+			P1		1
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		16
+			P6		11
+			P7		14
+			P8		4
+
+.......................................................
+List of processes in I/O:
+
+		<none>
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 8
+
+Process on CPU: P3, remaining burst duration: 8
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P4		3
+			P1		1
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		16
+			P6		11
+			P7		14
+			P8		4
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		48
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 12
+
+Process on CPU: P4, remaining burst duration: 3
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P1		1
+			P3		4
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		16
+			P6		11
+			P7		14
+			P8		4
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		44
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 15
+
+Process on CPU: P1, remaining burst duration: 1
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P3		4
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		16
+			P6		11
+			P7		14
+			P8		4
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		41
+			P4		35
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 16
+
+Process on CPU: P3, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		16
+			P6		11
+			P7		14
+			P8		4
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		40
+			P4		34
+			P1		27
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 20
+
+Process on CPU: P5, remaining burst duration: 16
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P6		11
+			P7		14
+			P8		4
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		36
+			P4		30
+			P1		23
+			P3		33
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 36
+
+Process on CPU: P6, remaining burst duration: 11
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P7		14
+			P8		4
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		20
+			P4		14
+			P1		7
+			P3		17
+			P5		24
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 43
+
+Process on CPU: P1, remaining burst duration: 3
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		14
+			P8		4
+			P6		4
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		13
+			P4		7
+			P3		10
+			P5		17
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 46
+
+Process on CPU: P7, remaining burst duration: 14
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P8		4
+			P6		4
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		10
+			P4		4
+			P3		7
+			P5		14
+			P1		31
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 50
+
+Process on CPU: P4, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P8		4
+			P6		4
+			P7		10
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		6
+			P3		3
+			P5		10
+			P1		27
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 54
+
+Process on CPU: P3, remaining burst duration: 12
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P8		4
+			P6		4
+			P7		10
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		2
+			P5		6
+			P1		23
+			P4		41
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 58
+
+Process on CPU: P2, remaining burst duration: 5
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P3		8
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P8		4
+			P6		4
+			P7		10
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P5		2
+			P1		19
+			P4		37
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 62
+
+Process on CPU: P3, remaining burst duration: 8
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P2		1
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P8		4
+			P6		4
+			P7		10
+			P5		17
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P1		15
+			P4		33
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 66
+
+Process on CPU: P2, remaining burst duration: 1
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P3		4
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P8		4
+			P6		4
+			P7		10
+			P5		17
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P1		11
+			P4		29
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 67
+
+Process on CPU: P3, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P8		4
+			P6		4
+			P7		10
+			P5		17
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P1		10
+			P4		28
+			P2		44
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 71
+
+Process on CPU: P8, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P6		4
+			P7		10
+			P5		17
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P1		6
+			P4		24
+			P2		40
+			P3		41
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 75
+
+Process on CPU: P6, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P7		10
+			P5		17
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P1		2
+			P4		20
+			P2		36
+			P3		37
+			P8		14
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 77
+
+Process on CPU: P1, remaining burst duration: 5
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		10
+			P5		17
+			P6		2
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		18
+			P2		34
+			P3		35
+			P8		12
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 81
+
+Process on CPU: P1, remaining burst duration: 1
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		10
+			P5		17
+			P6		2
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		14
+			P2		30
+			P3		31
+			P8		8
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 82
+
+Process on CPU: P7, remaining burst duration: 10
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P5		17
+			P6		2
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		13
+			P2		29
+			P3		30
+			P8		7
+			P1		43
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 92
+
+Process on CPU: P5, remaining burst duration: 17
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P6		2
+			P8		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		3
+			P2		19
+			P3		20
+			P1		33
+			P7		46
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 95
+
+Process on CPU: P4, remaining burst duration: 5
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P6		2
+			P8		5
+			P5		14
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		16
+			P3		17
+			P1		30
+			P7		43
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 99
+
+Process on CPU: P4, remaining burst duration: 1
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P6		2
+			P8		5
+			P5		14
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		12
+			P3		13
+			P1		26
+			P7		39
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 100
+
+Process on CPU: P6, remaining burst duration: 2
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P8		5
+			P5		14
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		11
+			P3		12
+			P1		25
+			P7		38
+			P4		45
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 102
+
+Process on CPU: P8, remaining burst duration: 5
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P5		14
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		9
+			P3		10
+			P1		23
+			P7		36
+			P4		43
+			P6		22
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 107
+
+Process on CPU: P5, remaining burst duration: 14
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		4
+			P3		5
+			P1		18
+			P7		31
+			P4		38
+			P6		17
+			P8		33
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 111
+
+Process on CPU: P2, remaining burst duration: 7
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		10
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P3		1
+			P1		14
+			P7		27
+			P4		34
+			P6		13
+			P8		29
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 115
+
+Process on CPU: P3, remaining burst duration: 18
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P2		3
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		10
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P1		10
+			P7		23
+			P4		30
+			P6		9
+			P8		25
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 119
+
+Process on CPU: P2, remaining burst duration: 3
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P3		14
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		10
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P1		6
+			P7		19
+			P4		26
+			P6		5
+			P8		21
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 122
+
+Process on CPU: P3, remaining burst duration: 14
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		10
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P1		3
+			P7		16
+			P4		23
+			P6		2
+			P8		18
+			P2		42
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 126
+
+Process on CPU: P1, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P3		10
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		10
+			P6		4
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P7		12
+			P4		19
+			P8		14
+			P2		38
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 130
+
+Process on CPU: P3, remaining burst duration: 10
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		10
+			P6		4
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P7		8
+			P4		15
+			P8		10
+			P2		34
+			P1		18
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 134
+
+Process on CPU: P3, remaining burst duration: 6
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		10
+			P6		4
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P7		4
+			P4		11
+			P8		6
+			P2		30
+			P1		14
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 138
+
+Process on CPU: P3, remaining burst duration: 2
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		10
+			P6		4
+			P7		17
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		7
+			P8		2
+			P2		26
+			P1		10
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 140
+
+Process on CPU: P5, remaining burst duration: 10
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P6		4
+			P7		17
+			P8		6
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		5
+			P2		24
+			P1		8
+			P3		65
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 145
+
+Process on CPU: P4, remaining burst duration: 3
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P6		4
+			P7		17
+			P8		6
+			P5		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		19
+			P1		3
+			P3		60
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 148
+
+Process on CPU: P1, remaining burst duration: 6
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P6		4
+			P7		17
+			P8		6
+			P5		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		16
+			P3		57
+			P4		51
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 152
+
+Process on CPU: P1, remaining burst duration: 2
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P6		4
+			P7		17
+			P8		6
+			P5		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		12
+			P3		53
+			P4		47
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 154
+
+Process on CPU: P6, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P7		17
+			P8		6
+			P5		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		10
+			P3		51
+			P4		45
+			P1		22
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 158
+
+Process on CPU: P7, remaining burst duration: 17
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P8		6
+			P5		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		6
+			P3		47
+			P4		41
+			P1		18
+			P6		8
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 164
+
+Process on CPU: P2, remaining burst duration: 12
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P8		6
+			P5		5
+			P7		11
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P3		41
+			P4		35
+			P1		12
+			P6		2
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 168
+
+Process on CPU: P2, remaining burst duration: 8
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P8		6
+			P5		5
+			P7		11
+			P6		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P3		37
+			P4		31
+			P1		8
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 172
+
+Process on CPU: P2, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P8		6
+			P5		5
+			P7		11
+			P6		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P3		33
+			P4		27
+			P1		4
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 176
+
+Process on CPU: P1, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P8		6
+			P5		5
+			P7		11
+			P6		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P3		29
+			P4		23
+			P2		37
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 180
+
+Process on CPU: P8, remaining burst duration: 6
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P5		5
+			P7		11
+			P6		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P3		25
+			P4		19
+			P2		33
+			P1		26
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 186
+
+Process on CPU: P5, remaining burst duration: 5
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P7		11
+			P6		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P3		19
+			P4		13
+			P2		27
+			P1		20
+			P8		51
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 191
+
+Process on CPU: P7, remaining burst duration: 11
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P6		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P3		14
+			P4		8
+			P2		22
+			P1		15
+			P8		46
+			P5		21
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 199
+
+Process on CPU: P4, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P6		5
+			P7		3
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P3		6
+			P2		14
+			P1		7
+			P8		38
+			P5		13
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 203
+
+Process on CPU: P6, remaining burst duration: 5
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P7		3
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P3		2
+			P2		10
+			P1		3
+			P8		34
+			P5		9
+			P4		61
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 205
+
+Process on CPU: P3, remaining burst duration: 14
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		3
+			P6		3
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		8
+			P1		1
+			P8		32
+			P5		7
+			P4		59
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 209
+
+Process on CPU: P1, remaining burst duration: 3
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P3		10
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		3
+			P6		3
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		4
+			P8		28
+			P5		3
+			P4		55
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 212
+
+Process on CPU: P3, remaining burst duration: 10
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		3
+			P6		3
+			P5		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		1
+			P8		25
+			P4		52
+			P1		24
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 216
+
+Process on CPU: P2, remaining burst duration: 9
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P3		6
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		3
+			P6		3
+			P5		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		21
+			P4		48
+			P1		20
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 220
+
+Process on CPU: P3, remaining burst duration: 6
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P2		5
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		3
+			P6		3
+			P5		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		17
+			P4		44
+			P1		16
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 224
+
+Process on CPU: P2, remaining burst duration: 5
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P3		2
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		3
+			P6		3
+			P5		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		13
+			P4		40
+			P1		12
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 228
+
+Process on CPU: P3, remaining burst duration: 2
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P2		1
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		3
+			P6		3
+			P5		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		9
+			P4		36
+			P1		8
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 230
+
+Process on CPU: P2, remaining burst duration: 1
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		3
+			P6		3
+			P5		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		7
+			P4		34
+			P1		6
+			P3		21
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 231
+
+Process on CPU: P7, remaining burst duration: 3
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P6		3
+			P5		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		6
+			P4		33
+			P1		5
+			P3		20
+			P2		76
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 234
+
+Process on CPU: P6, remaining burst duration: 3
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P5		5
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		3
+			P4		30
+			P1		2
+			P3		17
+			P2		73
+			P7		41
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 236
+
+Process on CPU: P1, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		5
+			P6		1
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		1
+			P4		28
+			P3		15
+			P2		71
+			P7		39
+
+.......................................................
+Finished processes: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 240
+
+Process on CPU: P5, remaining burst duration: 5
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P6		1
+			P8		14
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		24
+			P3		11
+			P2		67
+			P7		35
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 245
+
+Process on CPU: P6, remaining burst duration: 1
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P8		14
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		19
+			P3		6
+			P2		62
+			P7		30
+			P5		36
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 246
+
+Process on CPU: P8, remaining burst duration: 14
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		18
+			P3		5
+			P2		61
+			P7		29
+			P5		35
+			P6		10
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 251
+
+Process on CPU: P3, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P8		9
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		13
+			P2		56
+			P7		24
+			P5		30
+			P6		5
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 255
+
+Process on CPU: P8, remaining burst duration: 9
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		9
+			P2		52
+			P7		20
+			P5		26
+			P6		1
+			P3		61
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 264
+
+Process on CPU: P4, remaining burst duration: 5
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P6		6
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		43
+			P7		11
+			P5		17
+			P3		52
+			P8		73
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 268
+
+Process on CPU: P4, remaining burst duration: 1
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P6		6
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		39
+			P7		7
+			P5		13
+			P3		48
+			P8		69
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 269
+
+Process on CPU: P6, remaining burst duration: 6
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		38
+			P7		6
+			P5		12
+			P3		47
+			P8		68
+			P4		54
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 275
+
+Process on CPU: P7, remaining burst duration: 11
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		32
+			P5		6
+			P3		41
+			P8		62
+			P4		48
+			P6		12
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 286
+
+Process on CPU: P5, remaining burst duration: 16
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		21
+			P3		30
+			P8		51
+			P4		37
+			P6		1
+			P7		42
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 302
+
+Process on CPU: P6, remaining burst duration: 7
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		5
+			P3		14
+			P8		35
+			P4		21
+			P7		26
+			P5		26
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 307
+
+Process on CPU: P2, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P6		2
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P3		9
+			P8		30
+			P4		16
+			P7		21
+			P5		21
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 311
+
+Process on CPU: P6, remaining burst duration: 2
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P3		5
+			P8		26
+			P4		12
+			P7		17
+			P5		17
+			P2		41
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 313
+
+Process on CPU: <none>
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P3		3
+			P8		24
+			P4		10
+			P7		15
+			P5		15
+			P2		39
+			P6		14
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 316
+
+Process on CPU: P3, remaining burst duration: 15
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		21
+			P4		7
+			P7		12
+			P5		12
+			P2		36
+			P6		11
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 320
+
+Process on CPU: P3, remaining burst duration: 11
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		17
+			P4		3
+			P7		8
+			P5		8
+			P2		32
+			P6		7
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 324
+
+Process on CPU: P4, remaining burst duration: 6
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P3		7
+
+List of processes in the background queue: 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		13
+			P7		4
+			P5		4
+			P2		28
+			P6		3
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 328
+
+Process on CPU: P3, remaining burst duration: 7
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P4		2
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P6		9
+			P5		7
+			P7		15
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		9
+			P2		24
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 332
+
+Process on CPU: P4, remaining burst duration: 2
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P3		3
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P6		9
+			P5		7
+			P7		15
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		5
+			P2		20
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 334
+
+Process on CPU: P3, remaining burst duration: 3
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P6		9
+			P5		7
+			P7		15
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		3
+			P2		18
+			P4		82
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 337
+
+Process on CPU: P6, remaining burst duration: 9
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P5		7
+			P7		15
+			P8		16
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		15
+			P4		79
+			P3		18
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 346
+
+Process on CPU: P5, remaining burst duration: 7
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P7		15
+			P8		16
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		6
+			P4		70
+			P3		9
+			P6		18
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 352
+
+Process on CPU: P2, remaining burst duration: 9
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		15
+			P8		16
+			P5		1
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		64
+			P3		3
+			P6		12
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 356
+
+Process on CPU: P3, remaining burst duration: 14
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P2		5
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		15
+			P8		16
+			P5		1
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		60
+			P6		8
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 360
+
+Process on CPU: P2, remaining burst duration: 5
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P3		10
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		15
+			P8		16
+			P5		1
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		56
+			P6		4
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 364
+
+Process on CPU: P3, remaining burst duration: 10
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P2		1
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		15
+			P8		16
+			P5		1
+			P6		12
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		52
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 368
+
+Process on CPU: P2, remaining burst duration: 1
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P3		6
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		15
+			P8		16
+			P5		1
+			P6		12
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		48
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 369
+
+Process on CPU: P3, remaining burst duration: 6
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		15
+			P8		16
+			P5		1
+			P6		12
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		47
+			P2		31
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 373
+
+Process on CPU: P3, remaining burst duration: 2
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P7		15
+			P8		16
+			P5		1
+			P6		12
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		43
+			P2		27
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 375
+
+Process on CPU: P7, remaining burst duration: 15
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P8		16
+			P5		1
+			P6		12
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		41
+			P2		25
+			P3		26
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 390
+
+Process on CPU: P8, remaining burst duration: 16
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P5		1
+			P6		12
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		26
+			P2		10
+			P3		11
+			P7		21
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 400
+
+Process on CPU: P2, remaining burst duration: 7
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		1
+			P6		12
+			P8		6
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		16
+			P3		1
+			P7		11
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 404
+
+Process on CPU: P3, remaining burst duration: 5
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P2		3
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		1
+			P6		12
+			P8		6
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		12
+			P7		7
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 408
+
+Process on CPU: P2, remaining burst duration: 3
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		Process		Burst
+			P3		1
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		1
+			P6		12
+			P8		6
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		8
+			P7		3
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 411
+
+Process on CPU: P3, remaining burst duration: 1
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		1
+			P6		12
+			P8		6
+			P7		4
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		5
+			P2		43
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 412
+
+Process on CPU: P5, remaining burst duration: 1
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P6		12
+			P8		6
+			P7		4
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		4
+			P2		42
+			P3		31
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 413
+
+Process on CPU: P6, remaining burst duration: 12
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P8		6
+			P7		4
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		3
+			P2		41
+			P3		30
+			P5		31
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 416
+
+Process on CPU: P4, remaining burst duration: 5
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P8		6
+			P7		4
+			P6		9
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		38
+			P3		27
+			P5		28
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 420
+
+Process on CPU: P4, remaining burst duration: 1
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P8		6
+			P7		4
+			P6		9
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		34
+			P3		23
+			P5		24
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 421
+
+Process on CPU: P8, remaining burst duration: 6
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P7		4
+			P6		9
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		33
+			P3		22
+			P5		23
+			P4		77
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 427
+
+Process on CPU: P7, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P6		9
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		27
+			P3		16
+			P5		17
+			P4		71
+			P8		87
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 431
+
+Process on CPU: P6, remaining burst duration: 9
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		23
+			P3		12
+			P5		13
+			P4		67
+			P8		83
+			P7		32
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 440
+
+Process on CPU: <none>
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		14
+			P3		3
+			P5		4
+			P4		58
+			P8		74
+			P7		23
+			P6		24
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 443
+
+Process on CPU: P3, remaining burst duration: 6
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		11
+			P5		1
+			P4		55
+			P8		71
+			P7		20
+			P6		21
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 447
+
+Process on CPU: P3, remaining burst duration: 2
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		13
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		7
+			P4		51
+			P8		67
+			P7		16
+			P6		17
+
+.......................................................
+Finished processes: P1 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 449
+
+Process on CPU: P5, remaining burst duration: 13
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P2		5
+			P4		49
+			P8		65
+			P7		14
+			P6		15
+
+.......................................................
+Finished processes: P1 P3 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 454
+
+Process on CPU: P2, remaining burst duration: 8
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		8
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		44
+			P8		60
+			P7		9
+			P6		10
+
+.......................................................
+Finished processes: P1 P3 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 458
+
+Process on CPU: P2, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		8
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		40
+			P8		56
+			P7		5
+			P6		6
+
+.......................................................
+Finished processes: P1 P3 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 462
+
+Process on CPU: P5, remaining burst duration: 8
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		36
+			P8		52
+			P7		1
+			P6		2
+
+.......................................................
+Finished processes: P1 P3 P2 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 470
+
+Process on CPU: P7, remaining burst duration: 7
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P6		15
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		28
+			P8		44
+			P5		28
+
+.......................................................
+Finished processes: P1 P3 P2 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 477
+
+Process on CPU: P6, remaining burst duration: 15
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		21
+			P8		37
+			P5		21
+			P7		19
+
+.......................................................
+Finished processes: P1 P3 P2 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 492
+
+Process on CPU: <none>
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		6
+			P8		22
+			P5		6
+			P7		4
+			P6		30
+
+.......................................................
+Finished processes: P1 P3 P2 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 496
+
+Process on CPU: P7, remaining burst duration: 16
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P4		2
+			P8		18
+			P5		2
+			P6		26
+
+.......................................................
+Finished processes: P1 P3 P2 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 498
+
+Process on CPU: P4, remaining burst duration: 3
+.......................................................
+
+List of processes in the foreground queue: <active> current TQ 1/4
+
+		<none>
+
+List of processes in the background queue: 
+
+		Process		Burst
+			P5		11
+			P7		14
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		16
+			P6		24
+
+.......................................................
+Finished processes: P1 P3 P2 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 501
+
+Process on CPU: P5, remaining burst duration: 11
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P7		14
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		13
+			P6		21
+
+.......................................................
+Finished processes: P1 P3 P2 P4 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 512
+
+Process on CPU: P7, remaining burst duration: 14
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P8		2
+			P6		10
+			P5		21
+
+.......................................................
+Finished processes: P1 P3 P2 P4 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 526
+
+Process on CPU: P8, remaining burst duration: 6
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P6		8
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P5		7
+			P7		33
+
+.......................................................
+Finished processes: P1 P3 P2 P4 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 532
+
+Process on CPU: P6, remaining burst duration: 8
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P5		1
+			P7		27
+
+.......................................................
+Finished processes: P1 P3 P2 P4 P8 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 540
+
+Process on CPU: P5, remaining burst duration: 6
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P7		19
+
+.......................................................
+Finished processes: P1 P3 P2 P4 P8 P6 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 546
+
+Process on CPU: <none>
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P7		13
+			P5		13
+
+.......................................................
+Finished processes: P1 P3 P2 P4 P8 P6 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 559
+
+Process on CPU: P5, remaining burst duration: 3
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		Process		Burst
+			P7		10
+
+.......................................................
+List of processes in I/O:
+
+		<none>
+
+.......................................................
+Finished processes: P1 P3 P2 P4 P8 P6 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 562
+
+Process on CPU: P7, remaining burst duration: 10
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P5		11
+
+.......................................................
+Finished processes: P1 P3 P2 P4 P8 P6 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 572
+
+Process on CPU: <none>
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		Process	Remaining I/O time
+			P5		1
+
+.......................................................
+Finished processes: P1 P3 P2 P4 P8 P6 P7 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Current Time: 573
+
+Process on CPU: P5, remaining burst duration: 4
+.......................................................
+
+List of processes in the foreground queue: 
+
+		<none>
+
+List of processes in the background queue: <active> 
+
+		<none>
+
+.......................................................
+List of processes in I/O:
+
+		<none>
+
+.......................................................
+Finished processes: P1 P3 P2 P4 P8 P6 P7 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
