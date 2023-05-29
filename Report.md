@@ -171,7 +171,7 @@ to understand what we had put together to make it work correctly.
 
 ### Output Files
 
-Each alogorithm will have a file of snapshots saved to [data&charts/outputFiles](data&charts/outputFiles)
+Each algorithm will have a file of snapshots saved to [data&charts/outputFiles](data&charts/outputFiles)
 when run with display mode on.
 
 ### Average Breakdown

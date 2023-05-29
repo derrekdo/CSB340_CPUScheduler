@@ -30,7 +30,7 @@ To set the toggle look for the code in Main that looks like the below snippet:
 
 ## Snapshot logs
 
-Each alogorithm will have a file of snapshots saved to [data&charts/outputFiles](data&charts/outputFiles)
+Each algorithm will have a file of snapshots saved to [data&charts/outputFiles](data&charts/outputFiles)
 when run with display mode on.
 
 ```java
