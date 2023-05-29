@@ -287,7 +287,7 @@ public class MLFQ implements ScheduleInterface{
      */
     @Override
     public boolean getDisplayMode() {
-        return false;
+        return displayMode;
     }
 
     /**
@@ -298,7 +298,7 @@ public class MLFQ implements ScheduleInterface{
         this.displayMode = displayMode;
         if (displayMode){
             try {
-                outFile = new FileWriter(new File("MLFQ.txt"));
+                outFile = new FileWriter(new File("data&charts/outputFiles/MLFQ.txt"));
             } catch (IOException e) {
                 System.out.println(e);
             }

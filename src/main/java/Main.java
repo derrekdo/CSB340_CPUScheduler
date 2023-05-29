@@ -16,28 +16,28 @@ public class Main {
         TestUtil util = new TestUtil();
         RR roundRobin = new RR(Arrays.stream(util.getDefaultTestData()).toList());
         // toggle display mode
-        roundRobin.setDisplayMode(false);
+        roundRobin.setDisplayMode(true);
         if (roundRobin.getDisplayMode()) {
             displayResults(roundRobin);
         }
 
         SJF shortyJobFirst = new SJF(util.getDefaultTestData());
         // toggle display mode
-        shortyJobFirst.setDisplayMode(false);
+        shortyJobFirst.setDisplayMode(true);
         if (shortyJobFirst.getDisplayMode()) {
             displayResults(shortyJobFirst);
         }
 
         FCFS firstComeFirstServed = new FCFS(Arrays.stream(util.getDefaultTestData()).toList());
         // toggle display mode
-        firstComeFirstServed.setDisplayMode(false);
+        firstComeFirstServed.setDisplayMode(true);
         if (firstComeFirstServed.getDisplayMode()) {
             displayResults(firstComeFirstServed);
         }
 
         Priority priority = new Priority(Arrays.stream(util.getDefaultTestData()).toList());
         // toggle display mode
-        priority.setDisplayMode(false);
+        priority.setDisplayMode(true);
         if (priority.getDisplayMode()) {
             displayResults(priority);
         }
@@ -53,7 +53,7 @@ public class Main {
 
         MLFQ mlfq = new MLFQ(Arrays.asList(util.getDefaultTestData()), 5, 10);
         // toggle display mode
-        mlfq.setDisplayMode(false);
+        mlfq.setDisplayMode(true);
         if (mlfq.getDisplayMode()) {
             displayResults(mlfq);
         }
